@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  margin-top: 5rem;
+  margin: auto 0;
 
   background: transparent;
 
