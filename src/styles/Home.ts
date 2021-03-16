@@ -8,9 +8,17 @@ export const Main = styled.div`
   margin: 0 auto;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
+
+  @media (min-width: 600px) {}
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 export const ContentWrapper = styled.div`
