@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   overflow: hidden;
@@ -104,7 +104,11 @@ export const Human = styled.g`
     }
 `
 
-export const HoverMessage = styled.span`
+interface HoverMessageProps {
+    hasLeftHuman: boolean
+}
+
+export const HoverMessage = styled.span<HoverMessageProps>`
     position: absolute;
 
     background: rgba(0, 0, 0, .5);
@@ -137,4 +141,18 @@ export const HoverMessage = styled.span`
             transform: translateX(-50%);
         }
     }
+
+    ${props => props.hasLeftHuman && css`
+        transform: translateX(-50%);
+        opacity: 1;
+
+        animation: slide-out .1s forwards ease-in-out;
+
+        @keyframes slide-out { 
+            to {
+                opacity: 0;
+                transform: translateX(-30%);
+            }
+        }
+    `}
 `

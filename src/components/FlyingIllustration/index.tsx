@@ -13,6 +13,17 @@ import {
 
 export default function FlyingIllustration() {
   const [isHumanBeingHovered, setIsHumanBeingHovered] = useState(false);
+  const [hasLeftHuman, setHasLeftHuman] = useState(false);
+
+  const openHoverMessage = () => {
+    setIsHumanBeingHovered(true);
+    setHasLeftHuman(false);
+  };
+
+  const closeHoverMessage = () => {
+    setHasLeftHuman(true);
+    setTimeout(() => setIsHumanBeingHovered(false), 100);
+  };
 
   return (
     <Container>
@@ -586,8 +597,8 @@ export default function FlyingIllustration() {
             fill="url(#paint0_linear)"
           />
           <Human
-            onMouseEnter={() => setIsHumanBeingHovered(true)}
-            onMouseLeave={() => setIsHumanBeingHovered(false)}
+            onMouseEnter={openHoverMessage}
+            onMouseLeave={closeHoverMessage}
           >
             <path
               id="Vector_99"
@@ -811,7 +822,7 @@ export default function FlyingIllustration() {
         </defs>
       </IllustrationSvg>
       {isHumanBeingHovered && (
-        <HoverMessage>
+        <HoverMessage hasLeftHuman={hasLeftHuman}>
           I'm flying to fill this portfolio with awesome projects, please be
           patient
           <span>{`\u{1F91F}`}</span>
