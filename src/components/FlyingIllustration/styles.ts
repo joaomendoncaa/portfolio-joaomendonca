@@ -2,25 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   overflow: hidden;
+
   position: relative;
 
   width: 45.3125rem;
   height: 34.625rem;
-
-  &:hover {
-    &:after {
-        content: 'this is me flying to fill this portfolio with awesome projects';
-
-        position: absolute;
-
-        text-align: center;
-
-        z-index: 1;
-        bottom: 10px;
-        
-        width: 100%;
-    }
-  }
 `
 
 export const IllustrationSvg = styled.svg`
@@ -95,6 +81,8 @@ export const FourthLayer = styled.g`
 export const Human = styled.g`
     animation: flying 10s ease-in-out infinite;
 
+    cursor: help;
+
     transform-origin: center;
 
     @keyframes flying {
@@ -112,6 +100,41 @@ export const Human = styled.g`
         }
         to {
             transform: translate(0, 0);
+        }
+    }
+`
+
+export const HoverMessage = styled.span`
+    position: absolute;
+
+    background: rgba(0, 0, 0, .5);
+    padding: .5rem 1rem;
+
+    border-radius: 10px;
+    text-align: center;
+
+    width: 50%;
+
+    z-index: 3;
+    bottom: 0;
+    
+    left: 50%; 
+    transform: translateX(-70%);
+
+    color: white;
+
+    span {
+        margin-left: .5rem;
+    }
+
+    opacity: 0;
+
+    animation: slide-in .1s forwards ease-in-out;
+
+    @keyframes slide-in { 
+        to {
+            opacity: 1;
+            transform: translateX(-50%);
         }
     }
 `

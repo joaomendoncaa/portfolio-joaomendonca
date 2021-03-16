@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Container,
   IllustrationSvg,
@@ -6,9 +8,12 @@ import {
   ThirdLayer,
   FourthLayer,
   Human,
+  HoverMessage,
 } from "./styles";
 
 export default function FlyingIllustration() {
+  const [isHumanBeingHovered, setIsHumanBeingHovered] = useState(false);
+
   return (
     <Container>
       <IllustrationSvg
@@ -580,7 +585,10 @@ export default function FlyingIllustration() {
             height="334.432"
             fill="url(#paint0_linear)"
           />
-          <Human>
+          <Human
+            onMouseEnter={() => setIsHumanBeingHovered(true)}
+            onMouseLeave={() => setIsHumanBeingHovered(false)}
+          >
             <path
               id="Vector_99"
               d="M597.762 519.325C597.762 519.325 594.685 519.131 590.399 520.501C588.978 520.949 587.596 521.513 586.268 522.188C579.964 525.363 585.198 508.231 585.198 508.231C585.198 508.231 586.953 508.231 589.063 508.052C591.583 507.851 594.606 507.432 595.725 506.556C597.781 504.931 597.762 519.325 597.762 519.325Z"
@@ -802,6 +810,13 @@ export default function FlyingIllustration() {
           </linearGradient>
         </defs>
       </IllustrationSvg>
+      {isHumanBeingHovered && (
+        <HoverMessage>
+          I'm flying to fill this portfolio with awesome projects, please be
+          patient
+          <span>{`\u{1F91F}`}</span>
+        </HoverMessage>
+      )}
     </Container>
   );
 }

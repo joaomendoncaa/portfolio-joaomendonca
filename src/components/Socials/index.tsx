@@ -16,6 +16,7 @@ export default function Socials() {
           setSocialHovered(null);
         }}
         target="_blank"
+        rel="noopener"
         href="https://twitter.com/joaomendoncaaaa"
       >
         <svg
@@ -42,6 +43,7 @@ export default function Socials() {
           setSocialHovered(null);
         }}
         target="_blank"
+        rel="noopener"
         href="https://github.com/joaomendoncaa"
       >
         <svg
@@ -74,12 +76,13 @@ export default function Socials() {
       {/* Instagram Link */}
       <SocialLink
         onMouseEnter={() => {
-          setSocialHovered("laughing hard out of meme pages");
+          setSocialHovered("laughing hard out of memes");
         }}
         onMouseLeave={() => {
           setSocialHovered(null);
         }}
         target="_blank"
+        rel="noopener"
         href="https://www.instagram.com/_joao_mendonca_/"
       >
         <svg
@@ -106,6 +109,7 @@ export default function Socials() {
           setSocialHovered(null);
         }}
         target="_blank"
+        rel="noopener"
         href="https://www.linkedin.com/in/joaomendoncadev/"
       >
         <svg
