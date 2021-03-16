@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
+  padding: 5rem;
 
   max-width: 1500px;
 

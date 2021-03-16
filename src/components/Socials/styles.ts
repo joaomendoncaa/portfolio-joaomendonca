@@ -15,13 +15,13 @@ export const Container = styled.div`
     background: var(--icon-grey);
     height: 2px;
     border-radius: 2px;
-    width: 200px;
+    width: 100vw;
 
     z-index: 1;
 
     top: calc(50% - 1px);
 
-    left: -220px;
+    left: calc((100vw + 2rem) * -1);
     right: 0;
   }
 `
@@ -54,8 +54,8 @@ export const DirectionText = styled.p`
   color: var(--text-secondary);
 
   span {
-    margin-left: .3rem;
     color: var(--text-secondary);
+    margin-left: .3rem;
   }
 
   strong {
