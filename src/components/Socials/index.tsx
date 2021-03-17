@@ -37,7 +37,7 @@ export default function Socials() {
       {/* Github Link */}
       <SocialLink
         onMouseEnter={() => {
-          setSocialHovered("where I leave all my code");
+          setSocialHovered("where I leave all my precious code");
         }}
         onMouseLeave={() => {
           setSocialHovered(null);
@@ -76,7 +76,7 @@ export default function Socials() {
       {/* Instagram Link */}
       <SocialLink
         onMouseEnter={() => {
-          setSocialHovered("laughing hard out of memes");
+          setSocialHovered("laughing at memes");
         }}
         onMouseLeave={() => {
           setSocialHovered(null);
