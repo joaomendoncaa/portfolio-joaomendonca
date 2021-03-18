@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
-
   max-width: 500px;
+  
+  padding: 0 .5rem;
 
   margin: 0 auto;
 
@@ -12,9 +13,11 @@ export const Main = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 600px) {}
+  @media (min-width: 600px) {
+    padding: 0 .75rem;
+  }
   @media (min-width: 900px) {
-    max-width: 750px;
+    max-width: 850px;
 
     display: flex;
     flex-direction: row;
@@ -43,8 +46,20 @@ export const ContentWrapper = styled.div`
   }
 
   > h1, > h2 { 
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
+
+    @media (min-width: 600px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 900px) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: 1200px) {
+    }
+    @media (min-width: 1800px) {
+      font-size: 4rem;
+    }
   }
 
   >h1 { 

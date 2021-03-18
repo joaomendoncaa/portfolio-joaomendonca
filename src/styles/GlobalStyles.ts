@@ -14,6 +14,19 @@ export const GlobalStyles = createGlobalStyle`
 
     --text-primary: #0A2437;
     --text-secondary: #A3A3A3;
+
+    --illustration-width: 65vw;
+
+        @media (min-width: 600px) {
+            --illustration-width: 55vw;
+        }
+        @media (min-width: 900px) {}
+        @media (min-width: 1200px) {
+            --illustration-width: 40vw;
+        }
+        @media (min-width: 1800px) {
+            --illustration-width: 35vw;
+        }
   }
 
   * {

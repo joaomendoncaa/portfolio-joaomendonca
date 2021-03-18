@@ -5,8 +5,20 @@ export const Container = styled.div`
 
   position: relative;
 
-  width: 45.3125rem;
-  height: 34.625rem;
+  width: var(--illustration-width);
+  height: calc(var(--illustration-width) * 181 / 228);
+  /* aspect-ratio: 228 / 181; */
+
+  animation: appear .4s forwards ease-in;
+
+  @keyframes appear {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
 `
 
 export const IllustrationSvg = styled.svg`
