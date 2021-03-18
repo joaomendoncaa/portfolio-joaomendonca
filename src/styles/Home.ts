@@ -62,3 +62,29 @@ export const ContentWrapper = styled.div`
     max-width: 500px;
   }
 `
+
+export const ContactPageLink = styled.a`
+  margin: auto 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  border: 0.5px solid var(--blue-dark);
+  border-radius: 5px;
+
+  width: max-content;
+
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 300;
+
+  padding: 1rem 2rem;
+
+  transition: .1s ease-out;
+
+  &:hover {
+    background: var(--blue-dark);
+    color: white;
+}
+`

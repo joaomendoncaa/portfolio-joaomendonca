@@ -1,10 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import FlyingIllustration from "../components/FlyingIllustration";
-import OutlinedButton from "../components/OutlinedButton";
 import Socials from "../components/Socials";
 
-import { Main, ContentWrapper } from "../styles/Home";
+import { Main, ContentWrapper, ContactPageLink } from "../styles/Home";
 
 export default function Home() {
   return (
@@ -23,7 +23,9 @@ export default function Home() {
             development and everything that comes with it (it’s a lot). Love
             frontend, UI/UX and always seeking for more and more knowledge.
           </p>
-          <OutlinedButton height="big" text="Get In Touch" />
+          <Link href="/contact">
+            <ContactPageLink>Get In Touch</ContactPageLink>
+          </Link>
           <Socials />
         </ContentWrapper>
         <FlyingIllustration />
