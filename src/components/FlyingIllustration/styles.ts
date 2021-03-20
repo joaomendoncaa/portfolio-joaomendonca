@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: calc(var(--illustration-width) * 181 / 228);
   /* aspect-ratio: 228 / 181; */
 
-  animation: appear .4s forwards ease-in;
+  animation: appear .5s forwards ease-in;
 
   @keyframes appear {
       from {

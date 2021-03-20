@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import FlyingIllustration from "../components/FlyingIllustration";
 
@@ -13,6 +14,9 @@ export default function Contact() {
       </Head>
       <Main>
         <ContentWrapper>
+          <Link href="/">
+            <a>{`<--`} go back</a>
+          </Link>
           <h1>Hello Contact Page</h1>
         </ContentWrapper>
         <FlyingIllustration />
