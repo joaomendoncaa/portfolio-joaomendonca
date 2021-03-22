@@ -32,10 +32,50 @@ export const Main = styled.div`
 
 export const ContentWrapper = styled.div`
   height: 34.625rem;
+  width: 50%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+`
 
-  
+export const ContentHeader = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    color: var(--icon-grey);
+  }
+`
+
+export const BackLink = styled.a`
+  display: flex;
+  align-items: center;
+
+  padding: .5rem 0;
+
+  cursor: pointer;
+
+  svg {
+    transition: all .1s ease-in-out;
+    width: 50px;
+  }
+
+  path {
+    fill: var(--icon-grey);
+  }
+
+  &:hover {
+    svg {
+      width: 71px;
+    }
+
+    path {
+      width: 100%;
+      fill: var(--icon-blue);
+    }
+  }
 `
 
