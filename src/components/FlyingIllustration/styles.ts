@@ -5,10 +5,6 @@ export const Container = styled.div`
 
   position: relative;
 
-  width: var(--illustration-width);
-  height: calc(var(--illustration-width) * 181 / 228);
-  /* aspect-ratio: 228 / 181; */
-
   animation: appear .5s forwards ease-in;
 
   @keyframes appear {
@@ -19,6 +15,13 @@ export const Container = styled.div`
           opacity: 1;
       }
   }
+
+  height: 40vh;
+  width: calc(40vh * 228 / 181);
+
+  /* width: var(--illustration-width);
+  height: calc(var(--illustration-width) * 181 / 228); */
+  /* aspect-ratio: 228 / 181; */
 `
 
 export const IllustrationSvg = styled.svg`
