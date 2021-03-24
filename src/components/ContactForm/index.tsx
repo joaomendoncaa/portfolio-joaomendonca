@@ -74,7 +74,7 @@ export default function ContactForm() {
           </InputBlock>
 
           <InputBlock>
-            <InputTitle>What is the subject?</InputTitle>
+            {/* <InputTitle>What is the subject?</InputTitle> */}
             <TextField
               fullWidth
               variant="outlined"
@@ -90,7 +90,7 @@ export default function ContactForm() {
         </HorizontalBlock>
 
         <InputBlock>
-          <InputTitle>Let's talk!</InputTitle>
+          {/* <InputTitle>Let's talk!</InputTitle> */}
           <TextField
             fullWidth
             multiline

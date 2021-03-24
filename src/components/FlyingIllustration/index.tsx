@@ -823,8 +823,8 @@ export default function FlyingIllustration() {
       </IllustrationSvg>
       {isHumanBeingHovered && (
         <HoverMessage hasLeftHuman={hasLeftHuman}>
-          I'm flying to fill this portfolio with awesome projects, please be
-          patient
+          Landing many great projects! Soon I’ll share them here. Feel free to
+          fly by from time to time.
           <span>{`\u{1F91F}`}</span>
         </HoverMessage>
       )}

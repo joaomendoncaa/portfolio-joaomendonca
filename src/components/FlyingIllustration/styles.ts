@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   position: relative;
 
-  animation: appear .5s forwards ease-in;
+  animation: appear .1s forwards ease-in;
 
   @keyframes appear {
       from {
@@ -19,6 +19,10 @@ export const Container = styled.div`
   height: 40vh;
   width: calc(40vh * 228 / 181);
 
+  @media (min-width: 900px) {
+
+  }
+
   /* width: var(--illustration-width);
   height: calc(var(--illustration-width) * 181 / 228); */
   /* aspect-ratio: 228 / 181; */
@@ -28,6 +32,7 @@ export const IllustrationSvg = styled.svg`
   position: absolute;
 
   z-index: 1;
+  /* background: yellow; */
   bottom: 0;
   right: 0;
 
@@ -36,24 +41,29 @@ export const IllustrationSvg = styled.svg`
 `
 
 export const FirstLayer = styled.g`
-  animation: slide 15s linear infinite;
+  animation: slide-1 15s linear infinite;
 
-  @keyframes slide {
+  @keyframes slide-1 {
       from {
           transform: translateX(0%);
       }
       to {
-          transform: translateX(50%);
+          transform: translateX(49.62%);
       }
+  }
+
+  > path {
+      fill: black;
+      opacity: .2;
   }
 `
 
 export const SecondLayer = styled.g`
-  animation: slide 5s linear infinite;
+  animation: slide-2 5s linear infinite;
 
   filter: blur(.1px);
 
-  @keyframes slide {
+  @keyframes slide-2 {
       from {
           transform: translateX(0%);
       }
@@ -64,11 +74,11 @@ export const SecondLayer = styled.g`
 `
 
 export const ThirdLayer = styled.g`
-  animation: slide 3s linear infinite;
+  animation: slide-3 3s linear infinite;
 
   filter: blur(.5px);
 
-  @keyframes slide {
+  @keyframes slide-3 {
       from {
           transform: translateX(0%);
       }
@@ -79,11 +89,11 @@ export const ThirdLayer = styled.g`
 `
 
 export const FourthLayer = styled.g`
-  animation: slide 1s linear infinite;
+  animation: slide-4 1s linear infinite;
 
   filter: blur(1px);
 
-  @keyframes slide {
+  @keyframes slide-4 {
       from {
           transform: translateX(0%);
       }
@@ -132,7 +142,7 @@ export const HoverMessage = styled.span<HoverMessageProps>`
     border-radius: 10px;
     text-align: center;
 
-    width: 50%;
+    width: 90%;
 
     z-index: 3;
     bottom: 0;

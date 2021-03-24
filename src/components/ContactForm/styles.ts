@@ -78,7 +78,7 @@ export const InputBlock = styled.div`
 `
 
 export const InputTitle = styled.h2`
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--title-primary);
   margin-bottom: 1rem;
   font-weight: 500;

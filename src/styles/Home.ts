@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
-  max-width: 500px;
-  
-  padding: 0 .5rem;
+
+  max-width: 90%;
 
   margin: 0 auto;
 
@@ -13,11 +12,9 @@ export const Main = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 600px) {
-    padding: 0 .75rem;
-  }
+  @media (min-width: 600px) {}
   @media (min-width: 900px) {
-    max-width: 850px;
+    max-width: 90%;
 
     display: flex;
     flex-direction: row;
@@ -28,16 +25,23 @@ export const Main = styled.div`
     max-width: 1100px;
   }
   @media (min-width: 1800px) {
-    padding: 0 2.5rem;
-    max-width: 1500px;
+    max-width: 1200px;
   }
 `
 
 export const ContentWrapper = styled.div`
-  height: 34.625rem;
+  max-height: 60%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+
+  @media (min-width: 600px) {}
+  @media (min-width: 900px) {
+    max-height: 100%;
+    max-width: 50%;
+  }
+  @media (min-width: 1200px) {}
+  @media (min-width: 1800px) {}
 
   > span { 
     font-size: 1rem;
@@ -58,7 +62,7 @@ export const ContentWrapper = styled.div`
     @media (min-width: 1200px) {
     }
     @media (min-width: 1800px) {
-      font-size: 4rem;
+      font-size: 3.75rem;
     }
   }
 
@@ -79,7 +83,7 @@ export const ContentWrapper = styled.div`
 `
 
 export const ContactPageLink = styled.a`
-  margin: auto 0;
+  margin: 4rem 0 7rem 0;
 
   background: transparent;
 

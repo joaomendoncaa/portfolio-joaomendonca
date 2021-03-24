@@ -14,15 +14,18 @@ export const Main = styled.div`
 
   @media (min-width: 600px) {}
   @media (min-width: 900px) {
+    max-width: 90%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   @media (min-width: 1200px) {
+    max-width: 1100px;
   }
   @media (min-width: 1800px) {
-    max-width: 1500px;
+    max-width: 1200px;
   }
 `
 
@@ -31,6 +34,13 @@ export const ContentWrapper = styled.div`
 
   display: flex;
   flex-direction: column; 
+
+  @media (min-width: 600px) {}
+  @media (min-width: 900px) {
+    max-width: 50%;
+  }
+  @media (min-width: 1200px) {}
+  @media (min-width: 1800px) {}
 `
 
 export const ContentHeader = styled.div`
