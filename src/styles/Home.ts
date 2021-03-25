@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
@@ -29,7 +29,23 @@ export const Main = styled.div`
   }
 `
 
-export const ContentWrapper = styled.div`
+interface ContentWrapperProps {
+  isLeavingLanding: boolean;
+  animationMilliseconds: number;
+}
+
+export const ContentWrapper = styled.div<ContentWrapperProps>`
+  ${props => props.isLeavingLanding && css`
+    animation: vanish ${props.animationMilliseconds}ms forwards ease-in-out;
+
+    @keyframes vanish {
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+  `}
+
   max-height: 60%;
 
   display: flex;
@@ -82,7 +98,7 @@ export const ContentWrapper = styled.div`
   }
 `
 
-export const ContactPageLink = styled.a`
+export const ContactPageLink = styled.button`
   margin: 4rem 0 7rem 0;
 
   background: transparent;
@@ -105,5 +121,5 @@ export const ContactPageLink = styled.a`
   &:hover {
     background: var(--blue-dark);
     color: white;
-}
+  }
 `

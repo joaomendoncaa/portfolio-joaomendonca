@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   position: relative;
 
-  animation: appear .1s forwards ease-in;
+  /* animation: appear .5s forwards ease-in; */
 
   @keyframes appear {
       from {

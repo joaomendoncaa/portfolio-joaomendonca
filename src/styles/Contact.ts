@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Main = styled.div`
   height: 100vh;
@@ -29,7 +29,23 @@ export const Main = styled.div`
   }
 `
 
-export const ContentWrapper = styled.div`
+interface ContentWrapperProps {
+  isLeavingContact: boolean;
+  animationMilliseconds: number;
+}
+
+export const ContentWrapper = styled.div<ContentWrapperProps>`
+${props => props.isLeavingContact && css`
+    animation: vanish ${props.animationMilliseconds}ms forwards ease-in-out;
+
+    @keyframes vanish {
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+  `}
+
   max-height: 60%;
 
   display: flex;
@@ -55,7 +71,10 @@ export const ContentHeader = styled.div`
   }
 `
 
-export const BackLink = styled.a`
+export const BackLink = styled.button`
+  border: none;
+  background: none;
+
   display: flex;
   align-items: center;
 

@@ -1,9 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  width: 100%;
 `
 
 export const SubmitWrapper = styled.div`
@@ -13,7 +15,11 @@ export const SubmitWrapper = styled.div`
   align-items: center;
 `
 
-export const CancelButton = styled.button`
+interface CancelButtonProps {
+  isSendingMessage: boolean;
+} 
+
+export const CancelButton = styled.button<CancelButtonProps>`
   width: 30%;
   padding: 1rem 0;
 
@@ -36,6 +42,17 @@ export const CancelButton = styled.button`
 
     border: 1px solid red;
   }
+
+  ${props => props.isSendingMessage && css`
+    pointer-events: none;
+    animation: vanish-cancel-button .1s forwards ease-out;
+    
+    @keyframes vanish-cancel-button {
+      to {
+        opacity: 0;
+      }
+    }
+  `}
 `
 export const SubmitButton = styled.button`
   width: 65%;
@@ -88,4 +105,86 @@ export const Introduction = styled.p`
   width: 100%;
   margin: 2rem 0 2rem 0;
   color: var(--text-secondary);
+`
+
+export const SuccessWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    text-align: center;
+    max-width: 60%;
+    margin: 1rem 0 2rem 0;
+  }
+`
+
+export const SuccessSvg = styled.svg`
+  margin: 4rem 0 1rem 0;
+
+  circle {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: success-dash 2s ease-in-out forwards;
+  }
+
+  @keyframes success-dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  path {
+    transform-origin: center center;
+    opacity: 0;
+    transform: scale(0);
+
+    animation: success-pop-in .4s ease-in-out forwards;
+  }
+
+  @keyframes success-pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+`
+
+export const MessageSentTitle = styled.h1`
+  font-size: 1.75rem;
+`
+
+export const GoBackButton = styled.button`
+  margin: 2rem 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  border: 0.5px solid var(--blue-dark);
+  border-radius: 5px;
+
+  width: max-content;
+
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 300;
+
+  padding: 1rem 3rem;
+
+  transition: .1s ease-out;
+
+  &:hover {
+    background: var(--blue-dark);
+    color: white;
+  }
 `
