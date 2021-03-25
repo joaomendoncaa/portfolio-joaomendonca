@@ -89,7 +89,7 @@ export default function ContactForm<ContactFormProps>({
         "service_7m9n06l",
         "template_p6gebmr",
         emailParams,
-        process.env.NEXT_EMAILJS_CLIENT_ID
+        process.env.EMAILJS_CLIENT_ID
       )
       .then(
         (response) => {
