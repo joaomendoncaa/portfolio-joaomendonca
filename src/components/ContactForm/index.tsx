@@ -20,6 +20,8 @@ import {
   MessageSentTitle,
   GoBackButton,
   SuccessSvg,
+  FailedWrapper,
+  FailedSvg,
 } from "./styles";
 
 const contactFormValidationSchema = yup.object({
@@ -87,18 +89,14 @@ export default function ContactForm<ContactFormProps>({
         "service_7m9n06l",
         "template_p6gebmr",
         emailParams,
-        "user_YeAzJe877eIBfF9ufjz9D"
+        process.env.EMAILJS_CLIENT_ID
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-
           setIsSendingMessage(false);
           setHasSucceededSendingMessage(true);
         },
         (error) => {
-          console.log("FAILED...", error);
-
           setIsSendingMessage(false);
           setHasFailedSendingMessage(true);
         }
@@ -206,7 +204,7 @@ export default function ContactForm<ContactFormProps>({
           </GoBackButton>
         </SuccessWrapper>
       )}
-      {/* {hasFailedSendingMessage && (
+      {hasFailedSendingMessage && (
         <FailedWrapper>
           <FailedSvg
             width={82}
@@ -223,12 +221,16 @@ export default function ContactForm<ContactFormProps>({
             <circle cx={41} cy={41} r={39} stroke="#0A2437" strokeWidth={4} />
           </FailedSvg>
           <MessageSentTitle>Oops, something went wrong!</MessageSentTitle>
+          <span>
+            Something went wrong while trying to send your message to my
+            servers! Please try again later!
+          </span>
 
           <GoBackButton type="button" onClick={handleLeavingContact}>
             Got it!
           </GoBackButton>
         </FailedWrapper>
-      )} */}
+      )}
     </Container>
   );
 }

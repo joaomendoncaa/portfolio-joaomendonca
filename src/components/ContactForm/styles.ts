@@ -188,3 +188,56 @@ export const GoBackButton = styled.button`
     color: white;
   }
 `
+
+export const FailedWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    text-align: center;
+    max-width: 60%;
+    margin: 1rem 0 2rem 0;
+  }
+`
+
+export const FailedSvg = styled.svg`
+  margin: 4rem 0 1rem 0;
+
+  circle {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: failed-dash 2s ease-in-out forwards;
+  }
+
+  @keyframes failed-dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  path {
+    transform-origin: center center;
+    opacity: 0;
+    transform: scale(0);
+
+    animation: failed-pop-in .4s ease-in-out forwards;
+  }
+
+  @keyframes failed-pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+`
+
