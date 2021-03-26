@@ -36,6 +36,10 @@ export const SocialLink = styled.a`
   svg { 
     pointer-events: none;
     transition: .2s ease-out;
+
+    path {
+      fill: var(--icon-grey); 
+    }
   }
 
   &:hover {
@@ -50,6 +54,7 @@ export const SocialLink = styled.a`
 
 export const DirectionText = styled.p`
   margin-left: 1rem;
+  display: none;
 
   color: var(--text-secondary);
 
@@ -63,4 +68,11 @@ export const DirectionText = styled.p`
     color: var(--text-primary);
     margin-left: .3rem;
   }
+
+  @media (min-width: 600px) {}
+  @media (min-width: 900px) {
+    display: initial;
+  }
+  @media (min-width: 1200px) {}
+  @media (min-width: 1800px) {}
 `

@@ -6,14 +6,14 @@ export const GlobalStyles = createGlobalStyle`
 
     --blue-dark: #0A2437;
 
-    --icon-grey: #BCC4CA; 
+    --icon-grey: #B1B1B1; 
     --icon-blue: #0A2437; 
 
     --title-primary: #0A2437;
-    --title-secondary: #A3A3A3;
+    --title-secondary: #9d9d9d;
 
     --text-primary: #0A2437;
-    --text-secondary: #A3A3A3;
+    --text-secondary: #9d9d9d;
   }
 
   * {
