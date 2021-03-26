@@ -39,9 +39,6 @@ export default function Home() {
             development and everything that comes with it (it’s a lot). Love
             frontend, UI/UX and always seeking for more and more knowledge.
           </p>
-          <a target="_blank" href="/curriculum/en.pdf">
-            Curriculum
-          </a>
           <ContactPageLink onClick={handleLeaveLanding}>
             Get In Touch
           </ContactPageLink>
