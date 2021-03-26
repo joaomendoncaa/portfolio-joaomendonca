@@ -89,7 +89,7 @@ export default function ContactForm<ContactFormProps>({
         "service_7m9n06l",
         "template_p6gebmr",
         emailParams,
-        process.env.EMAILJS_CLIENT_ID
+        "user_YeAzJe877eIBfF9ufjz9D"
       )
       .then(
         (response) => {
