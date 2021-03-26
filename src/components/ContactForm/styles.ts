@@ -92,6 +92,11 @@ export const HorizontalBlock = styled.div`
 
 export const InputBlock = styled.div`
   margin-bottom: 2rem;
+
+  p {
+    position: absolute!important;
+    bottom: -1.25rem;
+  }
 `
 
 export const InputTitle = styled.h2`

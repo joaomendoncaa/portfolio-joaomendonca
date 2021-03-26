@@ -33,7 +33,13 @@ export default function FlyingIllustration() {
         viewBox="0 0 874 676"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="illustrationTitleID illustrationDescID"
+        role="img"
       >
+        <title id="illustrationTitleID">João Mendonça's illustration</title>
+        <desc id="illustrationDescID">
+          Animated illustration of João Mendonça's flying.
+        </desc>
         <g id="flying-illustration">
           <FirstLayer>
             <path

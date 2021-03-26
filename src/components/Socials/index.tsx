@@ -24,7 +24,13 @@ export default function Socials() {
           height={22}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="twitterTitleID twitterDescID"
+          role="img"
         >
+          <title id="twitterTitleID">Twitter</title>
+          <desc id="twitterDescID">
+            Twitter link to João Mendonça's profile
+          </desc>
           <path
             d="M20.742 3.966l.047.047.065-.013a9.204 9.204 0 002.543-.883c-.35.843-.935 1.499-1.76 1.971l.076.233a8.747 8.747 0 002.168-.517 7.808 7.808 0 01-1.117 1.198c-.263.229-.537.446-.824.652l-.057.041.006.07c.015.19.023.37.023.542 0 .932-.123 1.873-.37 2.822-.247.95-.605 1.877-1.076 2.78-.469.9-1.065 1.739-1.79 2.514a13.111 13.111 0 01-2.438 2.043c-.897.584-1.93 1.043-3.103 1.375-1.17.333-2.41.5-3.718.5-2.25 0-4.336-.54-6.26-1.618.163.014.335.02.517.02 2.086 0 3.947-.624 5.578-1.871l.285-.219-.36-.006a4.274 4.274 0 01-2.51-.827 4.125 4.125 0 01-1.451-1.862l.064.011a3.666 3.666 0 00.59.05c.414 0 .812-.057 1.194-.173l-.013-.242a4.191 4.191 0 01-2.462-1.422 3.92 3.92 0 01-.98-2.495c.59.283 1.214.433 1.872.448l.448.01-.378-.24a4.12 4.12 0 01-1.008-.897 4.215 4.215 0 01-.667-1.188 3.88 3.88 0 01-.246-1.36c0-.372.05-.736.152-1.092.085-.3.2-.583.346-.85A12.459 12.459 0 008.095 6.58c1.6.79 3.318 1.235 5.152 1.331l.17.01-.042-.165a3.889 3.889 0 01-.117-.953c0-1.148.42-2.123 1.265-2.93.845-.81 1.86-1.213 3.05-1.213 1.255 0 2.308.435 3.169 1.306zM4.108 1.642h-.012l-.012.003-.113.022c-.566.037-1.003.298-1.297.779h0a5.756 5.756 0 00-.838 3.014c0 .679.115 1.334.344 1.967a1.667 1.667 0 00-.369 1.055v.048c0 1.53.529 2.863 1.582 3.994-.024.12-.032.241-.025.366.009.143.03.283.064.419h0l.003.01c.334.98.879 1.815 1.634 2.503a7.142 7.142 0 01-1.395.137c-.317 0-.61-.016-.877-.047l-.167-.024-.01-.001h-.008c-.363 0-.69.104-.978.311-.285.207-.49.474-.611.802h0l-.001.003c-.122.363-.117.732.012 1.1.13.371.362.655.693.846 2.337 1.45 4.9 2.176 7.69 2.176 1.718 0 3.34-.254 4.866-.762 1.524-.507 2.848-1.205 3.971-2.095a14.889 14.889 0 002.908-3.059 13.734 13.734 0 001.875-3.702 13.33 13.33 0 00.669-3.948 9.995 9.995 0 001.857-2.022c.121-.14.209-.297.262-.472.052-.172.078-.352.078-.54 0-.54-.215-.977-.638-1.3.037-.19.049-.376.034-.557a1.595 1.595 0 00-.183-.611 1.58 1.58 0 00-.419-.507l-.001-.001a1.7 1.7 0 00-1.274-.35 1.764 1.764 0 00-.415.104 2.137 2.137 0 00-.205.089h0l-.01.005a6.19 6.19 0 01-1.527.665A6.189 6.189 0 0017.573.875c-1.526 0-2.866.494-4.015 1.481-1.113.956-1.782 2.135-2.001 3.531-2.505-.521-4.56-1.737-6.17-3.648a1.592 1.592 0 00-1.279-.597z"
             fill="#BCC4CA"
@@ -51,7 +57,11 @@ export default function Socials() {
           height={22}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="githubTitleID githubDescID"
+          role="img"
         >
+          <title id="githubTitleID">Github</title>
+          <desc id="githubDescID">Github link to João Mendonça's profile</desc>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -90,7 +100,13 @@ export default function Socials() {
           height={20}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="instagramTitleID instagramDescID"
+          role="img"
         >
+          <title id="instagramTitleID">Instagram</title>
+          <desc id="instagramDescID">
+            Instagram link to João Mendonça's profile
+          </desc>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -117,7 +133,13 @@ export default function Socials() {
           height={20}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="linkedinTitleID linkedinDescID"
+          role="img"
         >
+          <title id="linkedinTitleID">LinkedIn</title>
+          <desc id="linkedinDescID">
+            LinkedIn link to João Mendonça's profile
+          </desc>
           <path
             fillRule="evenodd"
             clipRule="evenodd"

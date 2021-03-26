@@ -27,7 +27,7 @@ import {
 const contactFormValidationSchema = yup.object({
   email: yup
     .string()
-    .email("You must enter a valid email so I can contact you later.")
+    .email("You must enter a valid email.")
     .required("An email is required"),
   subject: yup
     .string()
@@ -89,7 +89,7 @@ export default function ContactForm<ContactFormProps>({
         "service_7m9n06l",
         "template_p6gebmr",
         emailParams,
-        "user_YeAzJe877eIBfF9ufjz9D"
+        process.env.EMAILJS_CLIENT_ID
       )
       .then(
         (response) => {
