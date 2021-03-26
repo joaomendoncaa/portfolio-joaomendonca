@@ -17,7 +17,7 @@ export default function FlyingIllustration() {
   const [hasLeftHuman, setHasLeftHuman] = useState(false);
 
   const openHoverMessage = () => {
-    setIsHumanBeingHovered(true);
+    setTimeout(() => setIsHumanBeingHovered(true), 100);
     setHasLeftHuman(false);
   };
 
