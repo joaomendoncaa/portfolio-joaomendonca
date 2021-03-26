@@ -158,7 +158,7 @@ export default function Socials() {
         }}
         target="_blank"
         rel="noopener"
-        href="http://localhost:3000/curriculum/en.pdf"
+        href="http://joaomendonca.vercel.app/curriculum/en.pdf"
       >
         <svg
           width={16}
