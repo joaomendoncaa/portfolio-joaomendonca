@@ -95,7 +95,7 @@ export const InputBlock = styled.div`
 
   p {
     position: absolute!important;
-    bottom: -1.25rem;
+    bottom: -1.4rem;
   }
 `
 

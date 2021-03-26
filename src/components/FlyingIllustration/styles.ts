@@ -106,7 +106,7 @@ export const FourthLayer = styled.g`
 export const Human = styled.g`
     animation: flying 10s ease-in-out infinite;
 
-    cursor: help;
+    pointer-events: none;
 
     transform-origin: center;
 
@@ -127,6 +127,16 @@ export const Human = styled.g`
             transform: translate(0, 0);
         }
     }
+`
+
+export const HumanHitbox = styled.rect`
+    z-index: 600; 
+    stroke: var(--blue-dark);
+    fill: rgba(0, 0, 255, .1);
+
+    cursor: help;
+
+    opacity: 0;
 `
 
 interface HoverMessageProps {
@@ -181,3 +191,5 @@ export const HoverMessage = styled.span<HoverMessageProps>`
         }
     `}
 `
+
+
