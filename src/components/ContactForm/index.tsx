@@ -5,7 +5,6 @@ import { ThemeProvider } from "@material-ui/styles";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
 
 import {
   Container,
@@ -76,7 +75,7 @@ export default function ContactForm<ContactFormProps>({
   async function handleFormSubmission(values) {
     const { email, subject, message } = values;
 
-    var emailParams = {
+    let emailParams = {
       email,
       subject,
       message,
@@ -86,10 +85,10 @@ export default function ContactForm<ContactFormProps>({
 
     emailjs
       .send(
-        "service_7m9n06l",
-        "template_p6gebmr",
+        process.env.EMAIL_JS_SERVICE,
+        process.env.EMAIL_JS_TEMPLATE,
         emailParams,
-        "user_YeAzJe877eIBfF9ufjz9D"
+        process.env.EMAILJS_CLIENT_ID
       )
       .then(
         (response) => {
