@@ -19,7 +19,7 @@ module.exports = {
           },
           {
             key: 'Content-Security-Policy',
-            value: 'default-src \'self\'',
+            value: 'default-src *; style-src \'self\' \'unsafe-inline\' http://fonts.googleapis.com; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' http://fonts.googleapis.com',
           },
           {
             key: 'X-XSS-Protection',
