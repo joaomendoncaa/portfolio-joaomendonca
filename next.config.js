@@ -4,4 +4,29 @@ module.exports = {
     EMAIL_JS_TEMPLATE: "template_p6gebmr",
     EMAILJS_CLIENT_ID: "user_YeAzJe877eIBfF9ufjz9D",
   },
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: 'default-src \'self\'',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ]
+  },
 }
