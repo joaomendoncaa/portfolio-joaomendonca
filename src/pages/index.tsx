@@ -44,7 +44,7 @@ export default function Home() {
     <>
       <Head>
         <title>João Mendonça</title>
-        <meta name="description" content="João Mendonça portfolio" />
+        <meta name="description" content="João Mendonça's personal website, portfolio and blog" />
       </Head>
       <Main>
         {isInContactPage ? (
