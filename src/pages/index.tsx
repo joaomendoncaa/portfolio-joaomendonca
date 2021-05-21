@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>João Mendonça | Portfolio</title>
+        <title>João Mendonça</title>
         <meta name="description" content="João Mendonça portfolio" />
       </Head>
       <Main>
